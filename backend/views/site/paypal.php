@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <th>Details</th>
                                     <th>Information</th>
                                     <th>Date Time</th>
-                                    <th>Action</th>
+                   
                                 </tr>
                             </thead>
                             <tbody>
@@ -111,13 +111,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <dd><?= $value_project['date_time_payment'] ?></dd>
                                         </dl>
                                     </td>
-                                    <td>
-                                      
-                                        <?= Html::a('EDIT', ['transaction','id'=>(string)$value_project['_id']], ['class' => 'btn btn-default']) ?>
-
-
-
-                                    </td>
+ 
 
                                </tr>
 
