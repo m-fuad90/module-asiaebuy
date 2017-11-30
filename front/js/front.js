@@ -1,9 +1,9 @@
 $(function () {
 
-	  $("#social").select2({
-	   templateResult: formatState
+		  $("#social").select2({
+		   templateResult: formatState
 
-	  });
+		  });
 
       $("#fisher").hover(function(){
         $('.fisherstore').show();
@@ -64,7 +64,6 @@ $(function () {
         // }
     }
 
-
-
       
+
 });

@@ -10,9 +10,7 @@ html {
 
 body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif; }
-body {
-    overflow:hidden;
-}
+
 
 hr {
   max-width: 50px;
@@ -137,7 +135,7 @@ body {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
+  background-image: url("../img/headertest-01-01.png");
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -225,7 +223,7 @@ header.masthead {
 .btn-xl {
   padding: 1rem 2rem; 
   margin: 5px;
-  width: 240px;
+  width: 190px;
 }
 
 .btn-primary {

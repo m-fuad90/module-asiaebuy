@@ -27,20 +27,22 @@ AppAsset::register($this);
 </head>
 <body id="" onload="">
 <?php $this->beginBody() ?>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">AsiaEBuy</a>
-        
-      </div>
-    </nav>
 
     <header class="masthead text-center text-white d-flex">
+        <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto" id="tinggi">
+            <h1 class="text-uppercase">
+              <!-- <strong>A Big Welcome To AsiaEBuy</strong> -->
+            </h1>
+            <!-- <hr> -->
+          </div>
+          <?= $content ?>
 
-      <?= $content ?>
 
+        </div>
+      </div>
     </header>
-
-
 
 
 

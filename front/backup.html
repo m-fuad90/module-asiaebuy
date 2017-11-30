@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AsiaEbuy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='css/select2.css' rel='stylesheet' type='text/css'>
+    
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.css" rel="stylesheet">
+    <style type="text/css">
+body {
+    overflow:hidden;
+}
+</style>
+  </head>
+<!-- background='img/header-c.png' -->
+  <body id="" onload="">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><!-- AsiaEBuy --></a>
+        
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <!-- <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong style="color: black">A Big Welcome To AsiaEBuy</strong>
+            </h1>
+            <hr>
+          </div> -->
+          <div class="col-xs-12 col-md-12  mx-auto">
+          		
+            <!-- <p class="text-faded mb-5" style="color: black">Choose your country and start placing your orders online.</p> -->
+            <a id="fisher" class="btn btn-primary btn-xl" onclick="setCookie('fisher')" href="http://asiaebuy.com/fisher">Fisher <span style="display: none" class="fisherstore">Store</span></a>
+            <a id="my" class="btn btn-primary btn-xl" onclick="setCookie('my')" href="http://my.asiaebuy.com">Malaysia <span style="display: none" class="mystore">Store</span> <span><img src="img/Malaysia.jpg" style="width:30px; float:right;margin-top:3px;box-shadow: 1px 1px 1px #000;" ></span></a>
+
+            <!-- <select class="js-example-basic-single" id='social' style="padding:25px !important;">
+      				 <option value=''>Choose Your Country</option>
+      				 <option value='Malaysia'>Malaysia</option>
+      				 <option value='twitter'>Twitter</option>
+      				 <option value='linkedin'>Linkedin</option>
+      				 <option value='google_plus'>Google Plus</option>
+      				 <option value='vimeo'>Vimeo</option>
+      			</select> -->
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+<!-- <footer class="page-footer">
+		<div class="container text-center footerCss">
+			<p>Created &amp; Powered By EasyParcel Sdn Bhd</p>
+						<ul class="links">
+						  <li><a href="https://www.facebook.com/easyParcel.my" target="_blank"><i class="epi-facebook"></i></a></li>
+						  <li><a href="https://twitter.com/easyparcel" target="_blank"><i class="epi-twitter"></i></a></li>
+						  <li><a href="https://www.youtube.com/channel/UCnEO_TBo3zl-bNl93WSzT0A"target="_blank"><i class="epi-youtube-play"></i></a></li>
+						  <li><a href="https://www.pinterest.com/easyparcel/" target="_blank"><i class="epi-pinterest-circled"></i></a></li>
+						  <li><a href="https://www.instagram.com/easyparcel.my/" target="_blank"><i class="epi-instagramm"></i></a></li>
+						</ul>		</div>
+	</footer> -->
+  
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+	<script src="js/select.js"></script>
+    <!-- <scirpt src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js'></script> -->
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+    <script type="text/javascript">
+		 $(document).ready(function(){
+				
+		  $("#social").select2({
+		   templateResult: formatState
+
+		  });
+
+      $("#fisher").hover(function(){
+        $('.fisherstore').show();
+        $('.mystore').hide();
+      });
+
+      $("#my").hover(function(){
+        $('.fisherstore').hide();
+        $('.mystore').show();
+      });
+		 });
+		 
+		 function formatState (state) {
+		  if (!state.id) { return state.text; }
+		  var $state = $(
+		   '<span ><img sytle="display: inline-block;" src="img/' + state.text + '.jpg" style="width:30px; float:right;    box-shadow: 1px 1px 1px #000;" /> ' + state.text + '</span>'
+		  );
+		  return $state;
+		 }
+
+     function setCookie(cvalue) {
+        var date_variable = new Date();
+        date_variable.setTime(date_variable.getTime() + (30*24*60*60*1000));
+        var expires = "expires="+ date_variable.toUTCString();
+        document.cookie = "country=" + cvalue + ";" + expires + ";path=/";
+
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function checkCookie() {
+        var preferedCountry = getCookie("country");
+        if (preferedCountry == 'my') {
+          window.location = "http://my.asiaebuy.com";
+        }
+        else if(preferedCountry == 'fisher'){
+          window.location = "http://asiaebuy.com/fisher";
+        }
+        else{
+          //do nothing
+        }
+        // if (preferedCountry != "") {
+        //    window.location = "https://easyparcel."+preferedCountry;
+        // }
+    }
+
+	</script>
+
+  </body>
+
+</html>

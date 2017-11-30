@@ -1,0 +1,96 @@
+/*@media (min-width: 768px) {
+        #tinggi{
+            height: 200px;
+        }
+    }
+    @media (min-width: 640px) {
+        #tinggi{
+            height: 200px;
+        }
+    }
+     @media (min-width: 992px) {
+        #tinggi{
+            height: 200px;
+        }
+    }
+    @media (min-width: 480px) {
+        #tinggi{
+            height: 200px;
+        }
+    }
+     @media (min-width: 320px) {
+        #tinggi{
+            height: 130px;
+        }
+    }*/
+/*  
+
+    @media only screen and (max-device-width:480px){
+       #tinggi{
+            height: 200px;
+        }
+    }*/
+    /*@media only screen and (device-width:768px){
+       #tinggi{
+            height: 200px;
+        }
+    }*//* Smartphones (portrait and landscape) ----------- */
+
+@media (min-width: 480px) {
+        #tinggi{
+            height: 300px;
+        }
+    }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #tinggi{
+            height: 130px;
+        }
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    #tinggi{
+            height: 50px;
+        }
+}
+
+
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+     #tinggi{
+            height: 450px;
+        }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+     #tinggi{
+            height: 250px;
+        }
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    #tinggi{
+            height: 150px;
+        }
+}
+/*
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    #tinggi{
+            height: 550px;
+        }
+}*/
+
+/* Samsung Galaxy S3 ----------- */
+/*@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    #tinggi{
+                height: 550px;
+            }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    #tinggi{
+                height: 850px;
+            }
+}*/
