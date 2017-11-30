@@ -80847,3 +80847,721 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2017-11-30 06:37:12 [172.18.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:37:12 [172.18.0.1][-][-][info][application] $_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'HEAD'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44620'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512023831.9736
+    'REQUEST_TIME' => 1512023831
+    'argv' => []
+    'argc' => 0
+]
+2017-11-30 06:37:13 [172.18.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:37:13 [172.18.0.1][-][-][info][application] $_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44626'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512023833.3793
+    'REQUEST_TIME' => 1512023833
+    'argv' => []
+    'argc' => 0
+]
+2017-11-30 06:37:14 [172.18.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+    in /var/www/projects/asia/backend/views/layouts/login.php:50
+    in /var/www/projects/asia/backend/controllers/SiteController.php:98
+2017-11-30 06:37:14 [172.18.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:37:13 [172.18.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => '0e54c265af1004a0580a397a3fcfbc50'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/site/login'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44626'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=0e54c265af1004a0580a397a3fcfbc50'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512023833.7106
+    'REQUEST_TIME' => 1512023833
+    'argv' => []
+    'argc' => 0
+]
+2017-11-30 06:37:25 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:37:24 [172.18.0.1][59f6913dc25841000524b308][-][info][application] $_POST = [
+    '_csrf-backend' => 'MuGoxGvVxNDNftxfIZP4Dc66_zr_3MeJTZSjR76IGLhtkJ7yIIr3m7cvuip4o5xVp4icSYboqMcdxs12zr1y_w=='
+    'LoginForm' => [
+        'username' => 'leso.admin@gmail.com'
+        'password' => 'Amtujpino.1'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'advanced-backend' => '0e54c265af1004a0580a397a3fcfbc50'
+    '_csrf-backend' => 'ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => MongoDB\BSON\ObjectId#1
+    (
+        [oid] => '59f6913dc25841000524b308'
+    )
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '259'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/site/login'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44638'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '259'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.asia.local'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.asia.local/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=0e54c265af1004a0580a397a3fcfbc50; _csrf-backend=ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512023844.4738
+    'REQUEST_TIME' => 1512023844
+    'argv' => []
+    'argc' => 0
+]
+2017-11-30 06:37:25 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+    in /var/www/projects/asia/backend/views/layouts/main.php:249
+    in /var/www/projects/asia/backend/controllers/SiteController.php:67
+2017-11-30 06:37:25 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:37:25 [172.18.0.1][59f6913dc25841000524b308][-][info][application] $_COOKIE = [
+    '_csrf-backend' => 'ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG\";}'
+    'advanced-backend' => '8074c982e72e042c73ec4d66c04a9407'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => MongoDB\BSON\ObjectId#1
+    (
+        [oid] => '59f6913dc25841000524b308'
+    )
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44638'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.asia.local/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG%22%3B%7D; advanced-backend=8074c982e72e042c73ec4d66c04a9407'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512023845.241
+    'REQUEST_TIME' => 1512023845
+    'argv' => []
+    'argc' => 0
+]
+2017-11-30 06:37:29 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:37:29 [172.18.0.1][59f6913dc25841000524b308][-][info][application] $_GET = [
+    'id' => '5a1fa7080fcaa6000c0a5262'
+    'module' => 'rfq'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG\";}'
+    'advanced-backend' => '8074c982e72e042c73ec4d66c04a9407'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => MongoDB\BSON\ObjectId#1
+    (
+        [oid] => '59f6913dc25841000524b308'
+    )
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'id=5a1fa7080fcaa6000c0a5262&module=rfq'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/project/notify?id=5a1fa7080fcaa6000c0a5262&module=rfq'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44638'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.asia.local/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG%22%3B%7D; advanced-backend=8074c982e72e042c73ec4d66c04a9407'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512023849.7339
+    'REQUEST_TIME' => 1512023849
+    'argv' => [
+        0 => 'id=5a1fa7080fcaa6000c0a5262&module=rfq'
+    ]
+    'argc' => 1
+]
+2017-11-30 06:37:30 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+    in /var/www/projects/asia/backend/views/layouts/main.php:249
+    in /var/www/projects/asia/backend/controllers/ProjectController.php:423
+2017-11-30 06:37:30 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:37:30 [172.18.0.1][59f6913dc25841000524b308][-][info][application] $_GET = [
+    'id' => '5a1fa7050fcaa6000c0a5261'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG\";}'
+    'advanced-backend' => '8074c982e72e042c73ec4d66c04a9407'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => MongoDB\BSON\ObjectId#1
+    (
+        [oid] => '59f6913dc25841000524b308'
+    )
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'id=5a1fa7050fcaa6000c0a5261'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/project/quote?id=5a1fa7050fcaa6000c0a5261'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44638'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.asia.local/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG%22%3B%7D; advanced-backend=8074c982e72e042c73ec4d66c04a9407'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512023850.0069
+    'REQUEST_TIME' => 1512023850
+    'argv' => [
+        0 => 'id=5a1fa7050fcaa6000c0a5261'
+    ]
+    'argc' => 1
+]
+2017-11-30 06:43:10 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+    in /var/www/projects/asia/backend/views/layouts/main.php:249
+    in /var/www/projects/asia/backend/controllers/ProjectController.php:425
+2017-11-30 06:43:10 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:43:10 [172.18.0.1][59f6913dc25841000524b308][-][info][application] $_GET = [
+    'id' => '5a1fa7050fcaa6000c0a5261'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG\";}'
+    'advanced-backend' => '8074c982e72e042c73ec4d66c04a9407'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => MongoDB\BSON\ObjectId#1
+    (
+        [oid] => '59f6913dc25841000524b308'
+    )
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'id=5a1fa7050fcaa6000c0a5261'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/project/quote?id=5a1fa7050fcaa6000c0a5261'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44692'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.asia.local/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG%22%3B%7D; advanced-backend=8074c982e72e042c73ec4d66c04a9407'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512024189.9814
+    'REQUEST_TIME' => 1512024189
+    'argv' => [
+        0 => 'id=5a1fa7050fcaa6000c0a5261'
+    ]
+    'argc' => 1
+]
+2017-11-30 06:43:12 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:43:12 [172.18.0.1][59f6913dc25841000524b308][-][info][application] $_GET = [
+    'id' => '5a1fa8760fcaa6000b57f20c'
+    'module' => 'rfq'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG\";}'
+    'advanced-backend' => '8074c982e72e042c73ec4d66c04a9407'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => MongoDB\BSON\ObjectId#1
+    (
+        [oid] => '59f6913dc25841000524b308'
+    )
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'id=5a1fa8760fcaa6000b57f20c&module=rfq'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/project/notify?id=5a1fa8760fcaa6000b57f20c&module=rfq'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44692'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.asia.local/project/quote?id=5a1fa7050fcaa6000c0a5261'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG%22%3B%7D; advanced-backend=8074c982e72e042c73ec4d66c04a9407'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512024192.2779
+    'REQUEST_TIME' => 1512024192
+    'argv' => [
+        0 => 'id=5a1fa8760fcaa6000b57f20c&module=rfq'
+    ]
+    'argc' => 1
+]
+2017-11-30 06:43:13 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+    in /var/www/projects/asia/backend/views/layouts/main.php:249
+    in /var/www/projects/asia/backend/controllers/ProjectController.php:425
+2017-11-30 06:43:13 [172.18.0.1][59f6913dc25841000524b308][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.18.0.1
+2017-11-30 06:43:12 [172.18.0.1][59f6913dc25841000524b308][-][info][application] $_GET = [
+    'id' => '5a1fa8740fcaa6000b57f20b'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG\";}'
+    'advanced-backend' => '8074c982e72e042c73ec4d66c04a9407'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => MongoDB\BSON\ObjectId#1
+    (
+        [oid] => '59f6913dc25841000524b308'
+    )
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data'
+    'no_proxy' => '*.local, 169.254/16'
+    'HOSTNAME' => '90990937591e'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_MD5' => ''
+    'PHP_VERSION' => '5.6.30'
+    'GPG_KEYS' => '0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2'
+    'PHP_ASC_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz.asc/from/this/mirror'
+    'PHP_URL' => 'https://secure.php.net/get/php-5.6.30.tar.xz/from/this/mirror'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		libpcre3-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/var/www/html'
+    'PHP_SHA256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805'
+    'USER' => 'www-data'
+    'FCGI_ROLE' => 'RESPONDER'
+    'QUERY_STRING' => 'id=5a1fa8740fcaa6000b57f20b'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/project/quote?id=5a1fa8740fcaa6000b57f20b'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/projects/asia/admin'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.6'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'REMOTE_PORT' => '44692'
+    'SERVER_ADDR' => '172.18.0.2'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'admin.asia.local'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/var/www/projects/asia/admin/index.php'
+    'HTTP_HOST' => 'admin.asia.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.asia.local/project/quote?id=5a1fa7050fcaa6000c0a5261'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf-backend=ac770dea227955083422c80f61b37be6dbea8d634a6b21540c3a35848e77a772a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_q66K_3KzQfuY0dXi2csy4oNPRn1p5jG%22%3B%7D; advanced-backend=8074c982e72e042c73ec4d66c04a9407'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1512024192.6056
+    'REQUEST_TIME' => 1512024192
+    'argv' => [
+        0 => 'id=5a1fa8740fcaa6000b57f20b'
+    ]
+    'argc' => 1
+]

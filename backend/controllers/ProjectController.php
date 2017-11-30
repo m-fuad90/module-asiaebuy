@@ -213,6 +213,7 @@ class ProjectController extends Controller
                                         'catalog_no' => $value_new['catalog_no'],
                                         'quantity' => $value['quantity'],
                                         'description' => $value_new['desc'],
+                                        'specification' => $value_new['desc_long Description'],
                                         'price' => $priceFisher,
 
                                     ]
@@ -323,6 +324,7 @@ class ProjectController extends Controller
                                                 'catalog_no' => $value_new['catalog_no'],
                                                 'quantity' => $value['quantity'],
                                                 'description' => $value_new['desc'],
+                                                'specification' => $value_new['desc_long Description'],
                                                 'price' => $priceFisher,
 
                                             ]

@@ -75,7 +75,7 @@ return [
             'rules' => [
             ],
         ],
-        /*'mailer' => [
+       /* 'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',
             'useFileTransport' => false,

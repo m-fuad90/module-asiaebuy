@@ -39,6 +39,7 @@ class AppAssetModule extends AssetBundle
         'theme/assets/corporate/scripts/layout.js',
         'theme/assets/pages/scripts/bs-carousel.js',
         'js/js.js',
+
    
 
         
