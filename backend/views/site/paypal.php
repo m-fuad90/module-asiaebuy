@@ -33,14 +33,18 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-md-12">
 
+                <?php $i=0; foreach ($project as $key_project => $value_project) { $i++;?>
+
                 <div class="box">
                     <div class="box-header with-border">
-                      <h3 class="box-title">PayPal</h3>
+                      <h3 class="box-title">Transaction ID : <?= empty($value_project['transactionID']) ? '' : $value_project['transactionID'] ?></h3>
+                      <div class="pull-right"></div>
 
 
                     </div>
 
                     <div class="box-body">
+
 
                         <table class="table" border="0">
                             <thead>
@@ -53,7 +57,6 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </tr>
                             </thead>
                             <tbody>
-                               <?php $i=0; foreach ($project as $key_project => $value_project) { $i++;?>
                                <tr>
                                     <td><?= $i;?></td>
                                     <td>
@@ -115,17 +118,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                </tr>
 
-                                <?php } ?>
+       
                             </tbody>
                             
                         </table>
 
 
 
-
                     </div>
 
                 </div>
+
+
+                <?php } ?>
 
             </div>
 

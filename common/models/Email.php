@@ -38,6 +38,8 @@ class Email extends \yii\mongodb\ActiveRecord
             'text',
             'date_mail',
             'date_time_mail',
+            'project_id',
+            'myRFQ',
         ];
     }
 
@@ -47,7 +49,7 @@ class Email extends \yii\mongodb\ActiveRecord
     public function rules()
     {
         return [
-            [['from_who', 'to_who', 'subject', 'text', 'date_mail', 'date_time_mail'], 'safe']
+            [['from_who', 'to_who', 'subject', 'text', 'date_mail', 'date_time_mail','project_id','myRFQ'], 'safe']
         ];
     }
 

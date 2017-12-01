@@ -553,6 +553,8 @@ class ProjectController extends Controller
 
             $text = 'You Have 1 Order From : '.$user->email.' <br><br> '.$admin.'/project/notify?id='.(string)$notification->_id.'&module=order';
 
+            $newProject_id = new \MongoDB\BSON\ObjectID($model->_id);
+
             $mail = new Email();
             $mail->from_who = $from;
             $mail->to_who = $to;
@@ -560,6 +562,9 @@ class ProjectController extends Controller
             $mail->text = $text;
             $mail->date_mail = date('Y-m-d');
             $mail->date_time_mail = date('Y-m-d H:i:s');
+            $mail->project_id = $newProject_id;
+            $mail->myRFQ = $model->myRFQ;
+
 
             $mail->save();
 

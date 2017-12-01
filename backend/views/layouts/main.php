@@ -185,7 +185,11 @@ AppAsset::register($this);
                                 'url' => ['site/paypal'],
                                 'template'=> '<a href="{url}"><i class="fa fa-circle-o text-aqua"></i>{label}</a>',
                             ],
-
+                            [
+                                'label' => 'EMAIL', 
+                                'url' => ['site/email'],
+                                'template'=> '<a href="{url}"><i class="fa fa-circle-o text-aqua"></i>{label}</a>',
+                            ],
 
 
                         ],

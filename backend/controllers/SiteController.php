@@ -11,6 +11,7 @@ use common\models\LookupValidity;
 use common\models\Paypal;
 use common\models\Project;
 use yii\data\ActiveDataProvider;
+use common\models\Email;
 /**
  * Site controller
  */
@@ -30,7 +31,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index','setting','paypal'],
+                        'actions' => ['logout', 'index','setting','paypal','email'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -76,6 +77,14 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionEmail()
+    {
+        $email = Email::find()->all();
+
+        return $this->render('email',[
+            'email' => $email
+        ]);
+    }
 
 
     /**

@@ -1249,6 +1249,9 @@ class ProjectController extends Controller
 
             $text = 'You Have 1 Quotation For Project : '.$modelProject->myRFQ.' <br><br> '.$asia.'/fisher/project/notify?id='.(string)$notification->_id.'&module=quotation';
 
+
+            $newProject_id = new \MongoDB\BSON\ObjectID($modelProject->_id);
+
             $mail = new Email();
             $mail->from_who = $from;
             $mail->to_who = $to;
@@ -1256,6 +1259,9 @@ class ProjectController extends Controller
             $mail->text = $text;
             $mail->date_mail = date('Y-m-d');
             $mail->date_time_mail = date('Y-m-d H:i:s');
+            $mail->project_id = $newProject_id;
+            $mail->myRFQ = $modelProject->myRFQ;
+
 
             $mail->save();
 
@@ -1327,6 +1333,8 @@ class ProjectController extends Controller
 
             $text = 'Quotation : '.$modelProject->quotation_no.' For Project : '.$modelProject->myRFQ.' Has Been Revise <br><br> '.$asia.'/fisher/project/review?id='.(string)$project;
 
+            $newProject_id = new \MongoDB\BSON\ObjectID($modelProject->_id);
+
             $mail = new Email();
             $mail->from_who = $from;
             $mail->to_who = $to;
@@ -1334,6 +1342,8 @@ class ProjectController extends Controller
             $mail->text = $text;
             $mail->date_mail = date('Y-m-d');
             $mail->date_time_mail = date('Y-m-d H:i:s');
+            $mail->project_id = $newProject_id;
+            $mail->myRFQ = $modelProject->myRFQ;
 
             $mail->save();
 
