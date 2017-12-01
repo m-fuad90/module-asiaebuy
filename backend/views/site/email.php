@@ -4,6 +4,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\GridView;
+use common\models\Email;
 
 $script = <<< JS
 $(document).ready(function(){
@@ -33,17 +34,60 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-md-12">
 
-                <?php $i=0; foreach ($email as $key_email => $value_email) { $i++;?>
+                <?php $i=0; foreach ($project as $key_project => $value_project) { $i++;?>
 
                 <div class="box">
                     <div class="box-header with-border">
-                      <h3 class="box-title">Subject : <?= $value_email['subject'] ?></h3>
+                      <h3 class="box-title">#<?= $value_project['myRFQ'] ?></h3>
                       <div class="pull-right"></div>
 
 
                     </div>
 
                     <div class="box-body">
+
+                        <?php 
+
+                        $email = Email::find()->where(['project_id'=>$value_project['_id']])->all();
+
+                         ?>
+          
+                        <?php foreach ($email as $key_email => $value_email) { ?>
+
+                            <div class="box box-primary box-solid">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">From : <?= $value_email['from_who'] ?></h3>
+                                    <div class="pull-right">Date : <?= $value_email['date_mail'] ?></div>
+
+
+                                </div>
+
+                                <div class="box-body">
+
+
+
+                                    <div class="form-group">
+                                        <label>To :</label>
+                                        <input type="" name="" class="form-control" disabled="disabled" value="<?php echo $value_email['to_who']; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Subject :</label>
+                                        <input type="" name="" class="form-control" disabled="disabled" value="<?php echo $value_email['subject']; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Text :</label>
+                                        <textarea class="form-control" disabled="disabled" rows="6">
+                                                <?php echo strip_tags($value_email['text']); ?>
+                                        </textarea>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        <?php } ?>
+     
 
 
 

@@ -79,10 +79,12 @@ class SiteController extends Controller
 
     public function actionEmail()
     {
-        $email = Email::find()->all();
+        $project = Project::find()->orderBy(['_id' => SORT_DESC])->all();
+
+
 
         return $this->render('email',[
-            'email' => $email
+            'project' => $project
         ]);
     }
 
