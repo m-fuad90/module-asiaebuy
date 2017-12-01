@@ -607,14 +607,14 @@ $detailJson = json_encode($show,JSON_PRETTY_PRINT);
       <script>
         paypal.Button.render({
 
-            //env: 'production',
-            env: 'sandbox',
+            env: 'production',
+            //env: 'sandbox',
 
             // PayPal Client IDs - replace with your own
             // Create a PayPal app: https://developer.paypal.com/developer/applications/create
             client: {
-                sandbox:    'AaClFWfUpTbAUct7_St5dRPNgl4x_J0jMQU5XU70KkPitCffxFAhZ_NgXtM40EDY__6fkdz5S2CjZRLq',
-                //production:  'AdR0126xOc6UlLuQQCVZphLOZ5uUCa7SY04kTkhD5eKLQK3WWzglK2FMkOM0-fEXnwRroC3wc0ZzR5Vm',
+                //sandbox:    'AaClFWfUpTbAUct7_St5dRPNgl4x_J0jMQU5XU70KkPitCffxFAhZ_NgXtM40EDY__6fkdz5S2CjZRLq',
+                production:  'AdR0126xOc6UlLuQQCVZphLOZ5uUCa7SY04kTkhD5eKLQK3WWzglK2FMkOM0-fEXnwRroC3wc0ZzR5Vm',
 
             },
 
