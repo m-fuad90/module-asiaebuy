@@ -28,21 +28,10 @@ AppAsset::register($this);
 <body id="" onload="">
 <?php $this->beginBody() ?>
 
-    <header class="masthead text-center text-white d-flex">
-        <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto" id="tinggi">
-            <h1 class="text-uppercase">
-              <!-- <strong>A Big Welcome To AsiaEBuy</strong> -->
-            </h1>
-            <!-- <hr> -->
-          </div>
+
           <?= $content ?>
 
 
-        </div>
-      </div>
-    </header>
 
 
 

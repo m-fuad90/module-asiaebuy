@@ -1,40 +1,4 @@
-/*@media (min-width: 768px) {
-        #tinggi{
-            height: 200px;
-        }
-    }
-    @media (min-width: 640px) {
-        #tinggi{
-            height: 200px;
-        }
-    }
-     @media (min-width: 992px) {
-        #tinggi{
-            height: 200px;
-        }
-    }
-    @media (min-width: 480px) {
-        #tinggi{
-            height: 200px;
-        }
-    }
-     @media (min-width: 320px) {
-        #tinggi{
-            height: 130px;
-        }
-    }*/
-/*  
 
-    @media only screen and (max-device-width:480px){
-       #tinggi{
-            height: 200px;
-        }
-    }*/
-    /*@media only screen and (device-width:768px){
-       #tinggi{
-            height: 200px;
-        }
-    }*//* Smartphones (portrait and landscape) ----------- */
 
 @media (min-width: 480px) {
         #tinggi{
@@ -75,22 +39,72 @@
             height: 150px;
         }
 }
-/*
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    #tinggi{
-            height: 550px;
-        }
-}*/
 
-/* Samsung Galaxy S3 ----------- */
-/*@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    #tinggi{
-                height: 550px;
-            }
+
+/* dsdsad*/
+
+.responsive-image{
+    width: 100%;
+    height: 100%
+    background-size: auto;
+} 
+
+
+/* Retina display */
+@media screen and (min-width: 1024px){
+    .responsive-image{
+        background-image: url('../img/headertest-01-01.png');
+    }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    #tinggi{
-                height: 850px;
-            }
-}*/
+/* Desktop */
+@media screen and (min-width: 980px) and (max-width: 1024px){
+    .responsive-image{
+        background-image: url('../img/headertest-01-01.png');
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 760px) and (max-width: 980px){
+    .responsive-image{
+        background-image: url('../img/headertest-01-01.png');
+    }
+}
+
+/* Mobile HD */
+@media screen and (min-width: 350px) and (max-width: 760px){
+    .responsive-image{
+        background-image: url('../img/headertest-01-01.png');
+    }
+}
+
+/* Mobile LD */
+@media screen and (max-width: 350px){
+    .responsive-image{
+        background-image: url('../img/headertest-01-01.png');
+    }
+} 
+
+@media (max-width: 480px) {
+        .butang{
+            display: none;
+        }
+        .butang1{
+            display: block;
+            margin-top: 55px;
+        }
+        
+        
+    }
+      @media (min-width: 480px) {
+        .butang{
+            display: block;
+            position: absolute;
+              right:0;
+              bottom:0;
+        }
+        .butang1{
+            display: none;
+        }
+        
+    }
