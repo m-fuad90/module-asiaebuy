@@ -13,7 +13,7 @@ $oc = Url::to('@oc');
 
 
       <div>
-        <img src="img/headertest-01-01.png" width="100%">
+        <img src="front/img/headertest-01-01.png" width="100%">
         <div class="butang">
                 
             <p class="text-faded" style="color: black;margin-bottom: -5px">Choose your country and start placing your orders online.</p>
