@@ -120,27 +120,32 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <?php }?>
                                     </td>
                                     <td>
-                            <?php if (empty($model['revise'])) { ?>
+                                        <?php if (empty($model['revise'])) { ?>
 
-                                <?= Html::a('QT '.$model['quotation_no'], ['view', 'id' => (string)$model['_id']], ['class' => 'btn btn-default','target'=>'_BLANK']) ?>
-
-
-                            <?php } else { ?>
+                                            <?= Html::a('QT '.$model['quotation_no'], ['view', 'id' => (string)$model['_id']], ['class' => 'btn btn-default','target'=>'_BLANK']) ?>
 
 
-                                <?= Html::a('QT '.$model['quotation_no'].'-R'.$model['reviseCount'], ['view', 'id' => (string)$model['_id']], ['class' => 'btn btn-default','target'=>'_BLANK']) ?>
+                                        <?php } else { ?>
 
-                            <?php } ?>
 
-                            <?= Html::a('TRACK ORDER', [
-                                    'track', 
-                                    'id' => (string)$model['_id']
-                                    ], ['class' => 'btn btn-default']) ?>
+                                            <?= Html::a('QT '.$model['quotation_no'].'-R'.$model['reviseCount'], ['view', 'id' => (string)$model['_id']], ['class' => 'btn btn-default','target'=>'_BLANK']) ?>
 
-                            <?= Html::a('ORDER DETAIL', [
-                                    'order-detail', 
-                                    'project' => (string)$model['_id']
-                                    ], ['class' => 'btn btn-default']) ?>
+                                        <?php } ?>
+
+                                        <?= Html::a('TRACK ORDER', [
+                                                'track', 
+                                                'id' => (string)$model['_id']
+                                                ], ['class' => 'btn btn-default']) ?>
+
+                                        <?= Html::a('ORDER DETAIL', [
+                                                'order-detail', 
+                                                'project' => (string)$model['_id']
+                                                ], ['class' => 'btn btn-default']) ?>
+
+                                        <?= Html::a('IN'.$model['invoice_no'].'F', ['invoice', 'id' => (string)$model['_id']], ['class' => 'btn btn-default','target'=>'_BLANK']) ?>
+
+
+
 
                                     </td>
 

@@ -6,7 +6,7 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Project */
 
-$this->title = $model->invoice_no;
+$this->title = 'IN'.$model->invoice_no.'F';
 $this->params['breadcrumbs'][] = ['label' => 'Order', 'url' => ['order']];
 $this->params['breadcrumbs'][] = $this->title;
 $currency = [
@@ -117,10 +117,6 @@ $qt_title = 'INVOICE';
 
 
                         <br>
-                        <span style="font-size: 15px;">
-                          Unit 7-1,Wisma Genting (New Wing), No 28 Jalan Sultan Ismail, 50250, Kuala Lumpur, Malaysia
-         
-                        </span>
                         <span style="font-size: 15px;">
                           <?= $asiaebuy->address; ?>
          

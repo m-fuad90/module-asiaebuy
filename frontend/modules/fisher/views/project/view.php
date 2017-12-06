@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\helpers\Url;
-$this->title = $model->quotation_no;
+$this->title = 'QT'.$model->quotation_no;
 $this->params['breadcrumbs'][] = ['label' => 'Quotation', 'url' => ['quotation']];
 $this->params['breadcrumbs'][] = $this->title;
 $currency = [

@@ -49,6 +49,20 @@ class ProjectController extends Controller
         ]);
     }
 
+    public function actionInvoice($id)
+    {
+        //$this->layout = 'html';
+        $this->layout = '@frontend/views/layouts/html.php';
+        $asiaebuy = Asiaebuy::find()->one();
+        return $this->render('invoice', [
+            'model' => $this->findModel($id),
+            'asiaebuy' => $asiaebuy,
+        ]);
+    }
+
+
+
+
     protected function findModel($id)
     {
         if (($model = Project::findOne($id)) !== null) {
@@ -136,8 +150,7 @@ class ProjectController extends Controller
                     'province' => ['$first' => '$province' ],
                     'contact_no' => ['$first' => '$contact_no' ],
                     'email' => ['$first' => '$email' ],
-
-
+                    'invoice_no' => ['$first' => '$invoice_no' ],
 
                     'data' => [
                         '$push' => [
@@ -574,6 +587,37 @@ class ProjectController extends Controller
                 ->setSubject($subject)
                 ->setHtmlBody($text)
                 ->send();
+
+
+            $asiax = Url::to('@asiax');
+
+            $from_user =  Yii::$app->params['adminEmail'];
+            $to_user = $user->email;
+
+            $subject_user = 'Order Confirmation For Project No : '.$model->myRFQ;
+
+            $text_user = 'You Order Has Been Place <br><br> You Can Download Invoice Here : '.$asiax.'/fisher/project/invoice?id='.(string)$model->_id;
+
+            $mail = new Email();
+            $mail->from_who = $from_user;
+            $mail->to_who = $to_user;
+            $mail->subject = $subject_user;
+            $mail->text = $text_user;
+            $mail->date_mail = date('Y-m-d');
+            $mail->date_time_mail = date('Y-m-d H:i:s');
+            $mail->project_id = $newProject_id;
+            $mail->myRFQ = $model->myRFQ;
+
+            $mail->save();
+
+            Yii::$app->mailer->compose()
+                ->setFrom($from_user)
+                ->setTo($to_user)
+                ->setSubject($subject_user)
+                ->setHtmlBody($text_user)
+                ->send();
+
+            
 
 
             Yii::$app->session->setFlash('success_payment', 'Payment Successful');
