@@ -60,7 +60,7 @@ class Fisher extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'catalog_no' => 'Catalog No',
-            'desc' => 'Desc',
+            /*'desc' => 'Desc',
             'desc_long Description' => 'Desc Long  Description',
             'Std UOM' => 'Std  Uom',
             'ProductClass' => 'Product Class',
@@ -81,7 +81,7 @@ class Fisher extends \yii\db\ActiveRecord
             'e' => 'E',
             'asean_usd' => 'Asean Usd',
             'f' => 'F',
-            'asiapac_usd' => 'Asiapac Usd',
+            'asiapac_usd' => 'Asiapac Usd',*/
         ];
     }
 }

@@ -654,7 +654,26 @@ class ProjectController extends Controller
 
     public function actionOrderDetail($project)
     {
+        $user = User::find()->where(['_id' => Yii::$app->user->identity->id])->one();
 
+        $customer_id = base64_decode($user->customer_id);
+
+        $query2 = new Query;
+        $query2  ->select(['oc_country.name AS country_name','oc_zone.name AS zone_name','oc_address.*'])  
+                ->from('oc_customer')
+                ->leftJoin('oc_address','oc_customer.address_id = oc_address.address_id')
+                ->leftJoin('oc_country','oc_address.country_id = oc_country.country_id')
+                ->leftJoin('oc_zone','oc_address.zone_id = oc_zone.zone_id')
+                ->where(
+                    [
+                        'oc_customer.customer_id'=>$customer_id,
+
+                    ])
+                ->one(); 
+
+                
+        $command2 = $query2->createCommand();
+        $address_check = $command2->queryAll();
 
 
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
@@ -668,7 +687,9 @@ class ProjectController extends Controller
                 '$match' => [
 
                     '$and' => [
-
+                            [
+                                'data.choosed' => 'on'
+                            ],
                             [
                                 '_id' => $newProject_id,
 
@@ -713,7 +734,8 @@ class ProjectController extends Controller
                     'diff_country' => ['$first' => '$diff_country' ],
                     'lead_time' => ['$first' => '$lead_time' ],
                     'validity' => ['$first' => '$validity' ],
-
+                    'total' => ['$first' => '$total' ],
+                    'handling_fee' => ['$first' => '$handling_fee' ],
 
                     'data' => [
                         '$push' => [
@@ -763,7 +785,8 @@ class ProjectController extends Controller
             'model' => $model,
             'data' => $data,
             'show' => $show,
-            'newProject_id' => $newProject_id
+            'newProject_id' => $newProject_id,
+            'country_user' => $address_check[0]['country_id'],
 
         ]);
 

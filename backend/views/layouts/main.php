@@ -190,7 +190,11 @@ AppAsset::register($this);
                                 'url' => ['site/email'],
                                 'template'=> '<a href="{url}"><i class="fa fa-circle-o text-aqua"></i>{label}</a>',
                             ],
-
+                            [
+                                'label' => 'FISHER LIST', 
+                                'url' => ['fisher/index'],
+                                'template'=> '<a href="{url}"><i class="fa fa-circle-o text-aqua"></i>{label}</a>',
+                            ],
 
                         ],
                         'options' => [

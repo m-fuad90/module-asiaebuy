@@ -11,9 +11,6 @@ $this->title = 'myOrder-Details';
 $this->params['breadcrumbs'][] = $this->title;
 
 
-
-
-
 ?>
 
 <div class="row service-box margin-bottom-40">
@@ -436,7 +433,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                             <?php } ?>
 
-                            <dt>TOTAL : </dt>
+                            <dt>Total : </dt>
                             <dd>
                               
 
@@ -457,13 +454,76 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                             </dd>
-
                             <dt>
-                            	Payment Type : 
+                              Payment Type : 
                             </dt>
                             <dd>
-                            	<?= $model[0]['payment_type']; ?>
+                              <?= $model[0]['payment_type']; ?>
                             </dd>
+                            <hr>
+
+                  <?php if ($country_user == 129) { ?>
+
+                      <?php if ($sumTax < 200) { ?>
+
+                                <dd style="color: red;">* Order Is Less Than RM200.00, Extra Processing Fee Of RM50.00 Will Be Charged. </dd>
+                                <dt>Handling Fee : </dt>
+                                <dd><?= $model[0]['handling_fee'] ?></dd>
+                                <dt>Final Total : </dt>
+                                <dd><?= $model[0]['total'] ?></dd>
+
+                      <?php } else { ?>
+
+
+                      <?php } ?>
+
+                  <?php } elseif ($country_user == 209 || $country_user == 100 || $country_user == 168 || $country_user == 230 || $country_user == 188 || $country_user == 36 || $country_user == 116 || $country_user == 32) { ?>
+
+
+                      <?php if ($sumTax < 100) { ?>
+
+                                <dd style="color: red;">* Order Is Less Than 100.00 USD, Extra Processing Fee Of 20.00 USD Will Be Charged.</dd>
+                                <dt>Handling Fee : </dt>
+                                <dd><?= $model[0]['handling_fee'] ?></dd>
+                                <dt>Final Total : </dt>
+                                <dd><?= $model[0]['total'] ?></dd>
+
+
+                      <?php } else { ?>
+
+
+                      <?php } ?>
+
+
+
+                  <?php } else { ?>
+
+
+                      <?php if ($sumTax < 100) { ?>
+
+
+                                <dd style="color: red;">* Order Is Less Than 100.00 USD, Extra Processing Fee Of 20.00 USD Will Be Charged.</dd>
+                                <dt>Handling Fee : </dt>
+                                <dd><?= $model[0]['handling_fee'] ?></dd>
+                                <dt>Final Total : </dt>
+                                <dd><?= $model[0]['total'] ?></dd>
+
+                      
+
+                      <?php } else { ?>
+
+
+                      <?php } ?>
+
+
+
+
+                  <?php } ?>
+
+
+
+
+
 
                         </dl>
 
