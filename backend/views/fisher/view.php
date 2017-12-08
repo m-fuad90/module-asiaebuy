@@ -31,26 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'catalog_no',
             'desc',
-            'desc_long Description',
-            'Std UOM',
-            'ProductClass',
-            'CATALOG NUMBER',
-            'CDC',
-            'PkgChg',
-            'SUPkgWgt',
-            'Temperature Requirements',
-            'StdUnitVol',
-            'CatlgPg',
-            'BOL',
-            'original_price
- (USD)',
-            'c',
-            'd',
-            'local_myr',
-            'e',
-            'asean_usd',
-            'f',
-            'asiapac_usd',
+            //'desc_long Description',
+
         ],
     ]) ?>
 
