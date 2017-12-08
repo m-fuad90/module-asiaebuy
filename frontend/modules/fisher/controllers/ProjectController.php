@@ -16,6 +16,7 @@ use common\models\Asiaebuy;
 use common\models\Paypal;
 use common\models\Email;
 use yii\helpers\Url;
+use yii\db\Query;
 /**
  * ProjectController implements the CRUD actions for Project model.
  */
@@ -260,6 +261,26 @@ class ProjectController extends Controller
 
     public function actionPlace($id)
     {   
+        $user = User::find()->where(['_id' => Yii::$app->user->identity->id])->one();
+
+        $customer_id = base64_decode($user->customer_id);
+
+        $query2 = new Query;
+        $query2  ->select(['oc_country.name AS country_name','oc_zone.name AS zone_name','oc_address.*'])  
+                ->from('oc_customer')
+                ->leftJoin('oc_address','oc_customer.address_id = oc_address.address_id')
+                ->leftJoin('oc_country','oc_address.country_id = oc_country.country_id')
+                ->leftJoin('oc_zone','oc_address.zone_id = oc_zone.zone_id')
+                ->where(
+                    [
+                        'oc_customer.customer_id'=>$customer_id,
+
+                    ])
+                ->one(); 
+
+                
+        $command2 = $query2->createCommand();
+        $address_check = $command2->queryAll();
 
 
         $newProject_id = new \MongoDB\BSON\ObjectID($id);
@@ -382,11 +403,13 @@ class ProjectController extends Controller
 
 
 
+
         return $this->render('place', [
             'model' => $model,
             'data' => $data,
             'show' => $show,
-            'newProject_id' => $newProject_id
+            'newProject_id' => $newProject_id,
+            'country_user' => $address_check[0]['country_id'],
 
         ]);
     }
@@ -445,7 +468,7 @@ class ProjectController extends Controller
 
     }
 
-    public function actionTransaction($paymentID,$payerID,$paymentToken,$project,$transacId)
+    public function actionTransaction($paymentID,$payerID,$paymentToken,$project,$transacId,$total_final,$handling_fee)
     {
 
         $status = new Status();
@@ -491,7 +514,8 @@ class ProjectController extends Controller
 
             }
 
-
+            $model->total = $total_final;
+            $model->handling_fee = $handling_fee;
             $model->invoice_no = $invoice_no;
             $model->date_invoice = $date_invoice;
             $model->date_payment = date('Y-m-d');
@@ -630,6 +654,9 @@ class ProjectController extends Controller
 
     public function actionOrderDetail($project)
     {
+
+
+
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
         $collection = Yii::$app->mongodb->getCollection('project');

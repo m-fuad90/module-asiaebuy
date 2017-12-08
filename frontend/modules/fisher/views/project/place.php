@@ -451,6 +451,56 @@ $detailJson = json_encode($show,JSON_PRETTY_PRINT);
 
 
                             </dd>
+                            <br>
+
+                            <?php if ($country_user == 129) { ?>
+
+                                <?php if ($sumTax < 200) { ?>
+
+                                  <dt style="color: red;">Order Is Less Than RM200.00, Extra Processing Fee Of RM50.00 Will Be Charged. </dt>
+                                  <dt>Final Total : </dt>
+                                  <dd><?php echo $sumTax+50.00; ?></dd>
+
+                                <?php } else { ?>
+
+                                <?php } ?>
+
+
+                            <?php } elseif ($country_user == 209 || $country_user == 100 || $country_user == 168 || $country_user == 230 || $country_user == 188 || $country_user == 36 || $country_user == 116 || $country_user == 32) { ?>
+
+
+                                <?php if ($sumTax < 100) { ?>
+
+                                  <dt style="color: red;">Order Is Less Than 100.00 USD, Extra Processing Fee Of 20.00 USD Will Be Charged. </dt>
+                                  <dt>Final Total : </dt>
+                                  <dd><?php echo $sumTax+20.00; ?></dd>
+
+                                <?php } else { ?>
+
+                                <?php } ?>
+
+
+                            <?php } else { ?>
+
+                                <?php if ($sumTax < 100) { ?>
+
+                                  <dt style="color: red;">Order Is Less Than 100.00 USD, Extra Processing Fee Of 20.00 USD Will Be Charged. </dt>
+                                  <dt>Final Total : </dt>
+                                  <dd><?php echo $sumTax+20.00; ?></dd>
+
+                                <?php } else { ?>
+
+                                <?php } ?>
+
+
+
+
+                            <?php } ?>
+
+
+
+
+                            
 
                         </dl>
 
@@ -595,7 +645,51 @@ $detailJson = json_encode($show,JSON_PRETTY_PRINT);
 
                               <?php } ?>
 
+                            <br>
 
+                            <?php if ($country_user == 129) { ?>
+
+                                <?php if ($totalPay < 200) { ?>
+
+                                  <?php $charge =  '50.00'; ?>
+
+                                <?php } else { ?>
+
+                                  <?php $charge =  '0.00'; ?>
+
+                                <?php } ?>
+
+
+                            <?php } elseif ($country_user == 209 || $country_user == 100 || $country_user == 168 || $country_user == 230 || $country_user == 188 || $country_user == 36 || $country_user == 116 || $country_user == 32) { ?>
+
+
+                                <?php if ($totalPay < 100) { ?>
+
+                                  <?php $charge = '20.00'; ?>
+
+                                <?php } else { ?>
+
+                                  <?php $charge =  '0.00'; ?>
+
+                                <?php } ?>
+
+
+                            <?php } else { ?>
+
+                                <?php if ($totalPay < 100) { ?>
+
+                                  <?php $charge = '20.00'; ?>
+
+                                <?php } else { ?>
+
+                                  <?php $charge =  '0.00'; ?>
+
+                                <?php } ?>
+
+
+                      
+
+                            <?php } ?>
 
 
 </div>
@@ -641,12 +735,13 @@ $detailJson = json_encode($show,JSON_PRETTY_PRINT);
                         transactions: [
                             {
                                 amount: { 
-                                  total: '<?php echo round($priceTotal - $subDisPaypal + $subTaxPaypal,2); ?>', 
+                                  total: '<?php echo round($priceTotal - $subDisPaypal + $subTaxPaypal + $charge,2); ?>', 
                                   currency: '<?php echo $model[0]['currency'];?>',
                                   details:  {
                                       subtotal: '<?php echo $priceTotal; ?>',
                                       discount: '<?php echo $subDisPaypal; ?>',
                                       tax: '<?php echo $subTaxPaypal; ?>',
+                                      handling_fee: '<?php echo $charge; ?>'
                           
                 
                                     }
@@ -666,13 +761,15 @@ $detailJson = json_encode($show,JSON_PRETTY_PRINT);
             // onAuthorize() is called when the buyer approves the payment
             onAuthorize: function(data, actions) {
 
-                // Make a call to the REST api to execute the payment
+                // Make a call to the REST api to execute the payment // get
                 return actions.payment.execute().then(function(paymentDetails) {
 
+                  var total_final = JSON.stringify(paymentDetails.transactions[0].amount.total).replace(/\"/g, "");
+                  var handling_fee = JSON.stringify(paymentDetails.transactions[0].amount.details.handling_fee).replace(/\"/g, "");
                   var transacId = JSON.stringify(paymentDetails.transactions[0].related_resources[0].sale.id).replace(/\"/g, "");
 
+                  window.location = "<?php echo $baseUrl; ?>/transaction?transacId="+transacId+"&total_final="+total_final+"&handling_fee="+handling_fee+"&paymentID="+data.paymentID+"&payerID="+data.payerID+"&paymentToken="+data.paymentToken+"&project=<?php echo (string)$newProject_id; ?>";
 
-                  window.location = "<?php echo $baseUrl; ?>/transaction?transacId="+transacId+"&paymentID="+data.paymentID+"&payerID="+data.payerID+"&paymentToken="+data.paymentToken+"&project=<?php echo (string)$newProject_id; ?>";
 
                
                   

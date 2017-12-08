@@ -90,6 +90,8 @@ class Project extends \yii\mongodb\ActiveRecord
             'date_time_payment',
             'date_payment',
             'transactionID',
+            'handling_fee',
+
 
         ];
     }
