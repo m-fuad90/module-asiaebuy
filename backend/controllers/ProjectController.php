@@ -419,9 +419,11 @@ class ProjectController extends Controller
         ->where(['status' => 'Submit','_id'=>$id])
         ->one();
 
+
         return $this->render('quote', [
             'models' => $models,
             'asiaebuy' => $asiaebuy,
+            'country_user' => $address[0]['country_id'],
         ]);
 
     }
@@ -1386,10 +1388,37 @@ class ProjectController extends Controller
 
     public function actionView($id)
     {
+
+        $detail = $this->findModel($id);
+
+        $user = User::find()->where(['email' => $detail->email])->one();
+
+        $customer_id = base64_decode($user->customer_id);
+
+        $query2 = new Query;
+        $query2  ->select(['oc_country.name AS country_name','oc_zone.name AS zone_name','oc_address.*'])  
+                ->from('oc_customer')
+                ->leftJoin('oc_address','oc_customer.address_id = oc_address.address_id')
+                ->leftJoin('oc_country','oc_address.country_id = oc_country.country_id')
+                ->leftJoin('oc_zone','oc_address.zone_id = oc_zone.zone_id')
+                ->where(
+                    [
+                        'oc_customer.customer_id'=>$customer_id,
+
+                    ])
+                ->one(); 
+
+                
+        $command2 = $query2->createCommand();
+        $address_check = $command2->queryAll(); 
+
+
         $asiaebuy = Asiaebuy::find()->one();
+
         return $this->render('view', [
             'model' => $this->findModel($id),
             'asiaebuy' => $asiaebuy,
+            'country_user' => $address_check[0]['country_id'],
         ]);
     }
 
@@ -1465,10 +1494,35 @@ class ProjectController extends Controller
         ->where(['_id'=>$project])
         ->one();
 
+        $user = User::find()->where(['email' => $models->email])->one();
+
+        $customer_id = base64_decode($user->customer_id);
+
+        $query2 = new Query;
+        $query2  ->select(['oc_country.name AS country_name','oc_zone.name AS zone_name','oc_address.*'])  
+                ->from('oc_customer')
+                ->leftJoin('oc_address','oc_customer.address_id = oc_address.address_id')
+                ->leftJoin('oc_country','oc_address.country_id = oc_country.country_id')
+                ->leftJoin('oc_zone','oc_address.zone_id = oc_zone.zone_id')
+                ->where(
+                    [
+                        'oc_customer.customer_id'=>$customer_id,
+
+                    ])
+                ->one(); 
+
+                
+        $command2 = $query2->createCommand();
+        $address_check = $command2->queryAll(); 
+
+
+
+
 
         return $this->render('revise', [
             'models' => $models,
             'asiaebuy' => $asiaebuy,
+            'country_user' => $address_check[0]['country_id'],
         ]);
 
     }

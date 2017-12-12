@@ -176,7 +176,7 @@ AppAsset::register($this);
                                 'template'=> '<a href="{url}"><i class="fa fa-circle-o text-aqua"></i>{label}</a>',
                             ],
                             [
-                                'label' => 'LIST CUSTOMER', 
+                                'label' => 'CUSTOMERS', 
                                 'url' => ['user/index'],
                                 'template'=> '<a href="{url}"><i class="fa fa-circle-o text-aqua"></i>{label}</a>',
                             ],
@@ -191,7 +191,7 @@ AppAsset::register($this);
                                 'template'=> '<a href="{url}"><i class="fa fa-circle-o text-aqua"></i>{label}</a>',
                             ],
                             [
-                                'label' => 'FISHER LIST', 
+                                'label' => 'FISHER', 
                                 'url' => ['fisher/index'],
                                 'template'=> '<a href="{url}"><i class="fa fa-circle-o text-aqua"></i>{label}</a>',
                             ],

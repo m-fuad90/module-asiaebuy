@@ -38,7 +38,7 @@ $(document).ready(function(){
 JS;
 $this->registerJs($script);
 
-$this->title = 'Setting';
+$this->title = 'Settings';
 $this->params['breadcrumbs'][] = $this->title;
 
 
@@ -47,6 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <section class="content-header">
       <h1>
         <?= Html::encode($this->title) ?>
+        <small>Add / Update / Delete (Validity & Lead Time) </small>
 
       </h1>
 

@@ -7,13 +7,13 @@ use yii\widgets\Pjax;
 /* @var $searchModel common\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Users';
+$this->title = 'Customers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
     <section class="content-header">
       <h1>
         <?= Html::encode($this->title) ?>
-        <small>List Of Users</small>
+        <small>List Of Customer</small>
       </h1>
 
     </section>
@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="box">
                     <div class="box-header with-border">
-                      <h3 class="box-title">#</h3>
+                      <h3 class="box-title">Searching</h3>
                       <div class="pull-right"></div>
 
                     </div>
@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="box">
                     <div class="box-header with-border">
-                      <h3 class="box-title">#</h3>
+                      <h3 class="box-title">List Of Customer</h3>
                       <div class="pull-right"></div>
 
                     </div>

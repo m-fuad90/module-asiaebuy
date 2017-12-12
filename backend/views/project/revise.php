@@ -1039,7 +1039,44 @@ $qt_title = 'QUOTATION';
 
                         </table>
                         <br>
+                        <?php if ($country_user == 129) { ?>
 
+                          <?php if ($sumTax < 200) { ?>
+
+                          <span class="text-red">* Order Is Less Than RM200.00, Extra Processing Fee Of RM50.00 Will Be Charged Upon Checkout.</span>
+
+                          <?php } else { ?>
+
+                          <?php } ?>
+
+
+                        <?php } elseif ($country_user == 209 || $country_user == 100 || $country_user == 168 || $country_user == 230 || $country_user == 188 || $country_user == 36 || $country_user == 116 || $country_user == 32) { ?>
+
+                          <?php if ($sumTax < 100) { ?>
+
+                          <span class="text-red">* Order Is Less Than 100.00 USD, Extra Processing Fee Of 20.00 USD Will Be Charged. Upon Checkout.</span>
+
+
+                          <?php } else { ?>
+
+                          <?php } ?>
+
+
+
+                        <?php } else { ?>
+
+                          <?php if ($sumTax < 100) { ?>
+
+                          <span class="text-red">* Order Is Less Than 100.00 USD, Extra Processing Fee Of 20.00 USD Will Be Charged. Upon Checkout.</span>
+
+
+                          <?php } else { ?>
+
+                          <?php } ?>
+
+
+                        
+                        <?php } ?>
 
                     </div>
                     <div class="print">

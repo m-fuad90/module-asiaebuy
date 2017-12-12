@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <section class="content-header">
       <h1>
         <?= Html::encode($this->title) ?>
+        <small>Details Paypal Information</small>
 
       </h1>
 
