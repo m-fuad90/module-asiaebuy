@@ -148,6 +148,8 @@ $this->registerJs($script);
                                                 </td>
                                                 <td>
 
+
+
                                                     <?php if (empty($model->revise)) { ?>
 
                                                         <?= Html::a('QT '.$model->quotation_no, ['view', 'id' => (string)$model->_id], ['class' => 'btn btn-default']) ?>
@@ -165,6 +167,9 @@ $this->registerJs($script);
         
                                                         
                                                     <?php } else { ?>
+
+
+                                                        <?php if (empty($model->unable)) { ?>
 
 
                                                             <?php if (empty($model->revise) || $model->revise == 'No') { ?>
@@ -190,6 +195,15 @@ $this->registerJs($script);
                                                             <?php } ?>
 
 
+
+                                                      
+                                                        <?php } else { ?>
+
+                                                        <?php } ?>
+
+
+
+
                                                     <?php } ?>
 
 
@@ -211,6 +225,18 @@ $this->registerJs($script);
                                                     
                                                 </tr>
 
+
+                                            <?php } ?>
+                                            <?php if (empty($model->unable)) { ?>
+
+                                            <?php } else { ?>
+
+                                                <tr>
+                                                    <td colspan="3">
+
+                                                        <span class="text-red"><?= $model->unable; ?></span>
+                                                    </td>
+                                                </tr>
 
                                             <?php } ?>
 

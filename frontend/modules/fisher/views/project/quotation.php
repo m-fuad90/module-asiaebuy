@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <div class="panel-body">
 
-                        <table class="table">
+                        <table class="table" >
                             <thead>
                                 <tr>
                                     <th>Details</th>
@@ -153,6 +153,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                                 </tr>
+
+                                <?php if (empty($model->unable)) { ?>
+
+                                <?php } else { ?>
+
+                                    <tr>
+                                        <td colspan="3">
+                                            <span style="color: red;">* <?php echo $model->unable; ?></span>
+                                        </td>
+                                    </tr>
+
+                                <?php } ?>
+
+
+
                             </tbody>
                         </table>
 

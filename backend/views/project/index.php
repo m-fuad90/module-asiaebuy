@@ -155,10 +155,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                                         <?= Html::a('Quote',[$data->path,'id' => (string)$data->_id,'module' => $data->module], ['class' => 'btn btn-default']) ?>
 
+
+                                                        <?= Html::a('Unable To Quote',[$data->path,'id' => (string)$data->_id,'module' => 'unable'], ['class' => 'btn btn-default']) ?>
+
                           
                                                     <?php } else { ?>
 
                                                         <?= Html::a('Quote', ['quote', 'id' => (string)$model->_id], ['class' => 'btn btn-default']) ?>
+
+                                                        <?= Html::a('Unable To Quote', ['unable-quote', 'id' => (string)$model->_id], ['class' => 'btn btn-default']) ?>
 
                                                     <?php } ?>
 

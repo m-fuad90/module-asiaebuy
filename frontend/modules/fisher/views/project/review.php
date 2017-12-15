@@ -324,8 +324,20 @@ $this->params['breadcrumbs'][] = $this->title;
                             <?php $arrayItem = -1; $i=0; foreach ($model['data'] as $key_qt => $value_qt) { $i++; $arrayItem++; ?>
                               <tr >
                                   <td style="padding: 10px;width: 5px;">
+
+                                    <?php if (empty($model->unable)) { ?>
+
+
                                       <input type="checkbox" name="Project[<?= $arrayItem; ?>][choosed]" checked="checked">
                                       <input type="hidden" name="Project[<?php echo $arrayItem; ?>][currency]" value=<?php echo $model->currency; ?>>
+
+                                    <?php } else { ?>
+
+                                        <input type="checkbox" name="" checked="checked" disabled="disabled">
+
+                                    <?php } ?>
+
+
                                   </td>
                                   <td style="padding: 10px;width: 5px;">
                                     <?= $i; ?>
@@ -745,6 +757,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
                         </table>
                         <br>
+
+                        <?php if (empty($model->unable)) { ?>
+
+
                         <?php if ($country_user == 129) { ?>
 
                           <?php if ($sumTax < 200) { ?>
@@ -784,14 +800,30 @@ $this->params['breadcrumbs'][] = $this->title;
                         
                         <?php } ?>
 
+
+                        <?php } else { ?>
+
+                            <span style="color: red;">* <?php echo $model->unable; ?></span>
+
+                        <?php } ?>
+
+
+
                     </div>
+
+                    <?php if (empty($model->unable)) { ?>
+
+
                     <div class="print">
 
                          <?= Html::submitButton($model->isNewRecord ? 'CONFIRM ORDER' : 'CONFIRM ORDER', ['class' => $model->isNewRecord ? 'btn btn-primary m-btn--air' : 'btn btn-primary m-btn--air']) ?>
 
                     </div>
 
+                    <?php } else { ?>
 
+ 
+                    <?php } ?>
 
 
                 </page>

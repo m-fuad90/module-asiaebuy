@@ -91,6 +91,7 @@ class Project extends \yii\mongodb\ActiveRecord
             'date_payment',
             'transactionID',
             'handling_fee',
+            'unable',
 
 
         ];

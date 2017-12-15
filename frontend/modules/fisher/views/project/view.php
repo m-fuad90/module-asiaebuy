@@ -636,6 +636,11 @@ $qt_title = 'QUOTATION';
 
                         </table>
                         <br>
+
+
+
+                        <?php if (empty($model->unable)) { ?>
+
                         <?php if ($country_user == 129) { ?>
 
                           <?php if ($sumTax < 200) { ?>
@@ -674,6 +679,17 @@ $qt_title = 'QUOTATION';
 
                         
                         <?php } ?>
+
+
+
+                        
+
+                        <?php } else { ?>
+
+                            <span style="color: red;">* <?php echo $model->unable; ?></span>
+
+                        <?php } ?>
+
 
                     </div>
                     <div class="print">

@@ -428,6 +428,320 @@ class ProjectController extends Controller
 
     }
 
+
+    public function actionUnableQuote($id)
+    {
+
+        $modelsData = Project::find()
+        ->where(['status' => 'Submit','_id'=>$id])
+        ->one();
+
+        $asiaebuy = Asiaebuy::find()->one();
+
+        $user = User::find()->where(['_id' => $modelsData->belong_to])->one();
+
+        $customer_id = base64_decode($user->customer_id);
+
+        $query2 = new Query;
+        $query2  ->select(['oc_country.name AS country_name','oc_zone.name AS zone_name','oc_address.*'])  
+                ->from('oc_customer')
+                ->leftJoin('oc_address','oc_customer.address_id = oc_address.address_id')
+                ->leftJoin('oc_country','oc_address.country_id = oc_country.country_id')
+                ->leftJoin('oc_zone','oc_address.zone_id = oc_zone.zone_id')
+                ->where(
+                    [
+                        'oc_customer.customer_id'=>$customer_id,
+
+                    ])
+                ->one(); 
+
+                
+        $command2 = $query2->createCommand();
+        $address = $command2->queryAll();
+
+        
+
+        $check = Project::find()
+        ->orderBy([
+           'quotation_no'=>SORT_DESC,
+        ])
+        ->limit(1)
+        ->all();
+
+        foreach ($check as $key => $value) {
+            $temp = $value['quotation_no'];
+        }
+
+
+        $runningNo = $temp;
+
+        $no = 1000;
+
+        if (empty($runningNo)) {
+           
+            $modelsData->quotation_no = $no;
+            $modelsData->date_quotation = date('Y-m-d');
+            $modelsData->date_time_quotation = date('Y-m-d H:i:s');
+
+
+            foreach ($modelsData['data'] as $key => $value) {
+
+                $connection = \Yii::$app->db;
+                $sql = $connection->createCommand("SELECT *,COUNT(catalog_no) as duplicate FROM fisher WHERE SUBSTRING(catalog_no,5) = '".$value['catalog_no']."'");
+                $checkVar = $sql->queryAll();
+
+                foreach ($checkVar as $key_fisher => $value_fisher) {
+
+
+                    if ($value_fisher['duplicate'] != 0) {
+
+
+                        $fisherNew = Fisher::find()->where(['catalog_no' => $value_fisher['catalog_no']])->all();
+                        
+                        foreach ($fisherNew as $key_new => $value_new) {
+
+                            if ($address[0]['country_id'] == 129) {
+
+                                $priceFisher = $value_new['local_myr'];
+
+  
+                            } elseif ($address[0]['country_id'] == 209 || $address[0]['country_id'] == 100 || $address[0]['country_id'] == 168 || $address[0]['country_id'] == 230 || $address[0]['country_id'] == 188 || $address[0]['country_id'] == 36 || $address[0]['country_id'] == 116 || $address[0]['country_id'] == 32) {
+
+                                $priceFisher = $value_new['asean_usd'];
+              
+                            } else {
+
+                                $priceFisher = $value_new['asiapac_usd'];
+
+                            }
+
+
+                            $collection = Yii::$app->mongodb->getCollection('project');
+                            $arrUpdateD = [
+                                '$push' => [
+                                    'data' => [
+                                        'catalog_no' => $value_new['catalog_no'],
+                                        'quantity' => $value['quantity'],
+                                        'description' => $value_new['desc'],
+                                        'specification' => $value_new['desc_long Description'],
+                                        'price' => $priceFisher,
+
+                                    ]
+
+                                ]
+                            
+                            ];
+                            $collection->update(['_id' => $id],$arrUpdateD);
+                            
+                        }
+
+                            $collection = Yii::$app->mongodb->getCollection('project');
+                            $arrUpdate = [
+                                '$pull' => [
+                                    'data' => [
+                                        'catalog_no' => substr($value_new['catalog_no'],4)
+                                    ]
+                                ],
+
+                            
+                            ];
+                            $collection->update(['_id' => $id],$arrUpdate);
+
+                    } else {
+
+                        $fisherNew = Fisher::find()->where(['catalog_no' => $value_fisher['catalog_no']])->all();
+                        
+                        foreach ($fisherNew as $key_new => $value_new) {
+
+                                $collection = Yii::$app->mongodb->getCollection('project');
+                                $arrUpdateD = [
+                                    '$push' => [
+                                        'data' => [
+                                            'catalog_no' => $value['catalog_no'],
+                                            'quantity' => $value['quantity'],
+                                            'description' => $value['desc'],
+                       
+
+                                        ]
+
+                                    ]
+                                
+                                ];
+                                $collection->update(['_id' => $id],$arrUpdateD);
+                            
+
+                        }
+
+
+
+
+                    }
+
+
+                }
+
+
+    
+            }
+
+
+
+        } else {
+
+            if (empty($modelsData->quotation_no)) {
+                    
+                $modelsData->quotation_no = $runningNo + 1;
+                $modelsData->date_quotation = date('Y-m-d');
+                $modelsData->date_time_quotation = date('Y-m-d H:i:s');
+
+
+                    foreach ($modelsData['data'] as $key => $value) {
+
+                        $connection = \Yii::$app->db;
+                        $sql = $connection->createCommand("SELECT *,COUNT(catalog_no) as duplicate FROM fisher WHERE SUBSTRING(catalog_no,5) = '".$value['catalog_no']."'");
+                        $checkVar = $sql->queryAll();
+
+                        foreach ($checkVar as $key_fisher => $value_fisher) {
+
+
+                            if ($value_fisher['duplicate'] != 0) {
+
+
+                                $fisherNew = Fisher::find()->where(['catalog_no' => $value_fisher['catalog_no']])->all();
+                                
+                                foreach ($fisherNew as $key_new => $value_new) {
+
+                                    if ($address[0]['country_id'] == 129) {
+
+                                        $priceFisher = $value_new['local_myr'];
+
+          
+                                    } elseif ($address[0]['country_id'] == 209 || $address[0]['country_id'] == 100 || $address[0]['country_id'] == 168 || $address[0]['country_id'] == 230 || $address[0]['country_id'] == 188 || $address[0]['country_id'] == 36 || $address[0]['country_id'] == 116 || $address[0]['country_id'] == 32) {
+
+                                        $priceFisher = $value_new['asean_usd'];
+                      
+                                    } else {
+
+                                        $priceFisher = $value_new['asiapac_usd'];
+
+                                    }
+
+
+                                    $collection = Yii::$app->mongodb->getCollection('project');
+                                    $arrUpdateD = [
+                                        '$push' => [
+                                            'data' => [
+                                                'catalog_no' => $value_new['catalog_no'],
+                                                'quantity' => $value['quantity'],
+                                                'description' => $value_new['desc'],
+                                                'specification' => $value_new['desc_long Description'],
+                                                'price' => $priceFisher,
+
+                                            ]
+
+                                        ]
+                                    
+                                    ];
+                                    $collection->update(['_id' => $id],$arrUpdateD);
+                                    
+
+
+
+                                }
+
+                                    $collection = Yii::$app->mongodb->getCollection('project');
+                                    $arrUpdate = [
+                                        '$pull' => [
+                                            'data' => [
+                                                'catalog_no' => $value['catalog_no']
+                                            ]
+                                        ],
+
+                                    
+                                    ];
+                                    $collection->update(['_id' => $id],$arrUpdate);
+
+
+                                
+
+
+                            } else {
+
+
+                                $fisherNew = Fisher::find()->where(['catalog_no' => $value_fisher['catalog_no']])->all();
+                                
+                                foreach ($fisherNew as $key_new => $value_new) {
+
+            
+                                    $collection = Yii::$app->mongodb->getCollection('project');
+                                    $arrUpdateD = [
+                                        '$push' => [
+                                            'data' => [
+                                                'catalog_no' => $value['catalog_no'],
+                                                'quantity' => $value['quantity'],
+                                                'description' => $value['desc'],
+                           
+
+                                            ]
+
+                                        ]
+                                    
+                                    ];
+                                    $collection->update(['_id' => $id],$arrUpdateD);
+                                    
+
+
+
+                                }
+
+       
+
+
+                                
+
+                            }
+
+
+
+
+
+                        }
+
+
+                
+
+
+                    }
+
+
+            } elseif (!empty($modelsData->quotation_no)) {
+                
+
+            }
+    
+
+        }
+
+        $modelsData->unable = 'Sorry To Say That We Are Unable To Quote';
+        $modelsData->save();
+
+
+        $models = Project::find()
+        ->where(['status' => 'Submit','_id'=>$id])
+        ->one();
+
+
+        return $this->render('unable-quote', [
+            'models' => $models,
+            'asiaebuy' => $asiaebuy,
+            'country_user' => $address[0]['country_id'],
+        ]);
+
+    }
+
+
+
+
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
         return parent::beforeAction($action);
@@ -1187,6 +1501,12 @@ class ProjectController extends Controller
             $modelProject->total = $total;
             $modelProject->save();
 
+        } elseif ($location == 'unable') {
+
+            $modelProject->status = 'Quoted';
+            $modelProject->total = $total;
+            $modelProject->save();
+
         }
 
 
@@ -1369,7 +1689,6 @@ class ProjectController extends Controller
 
     public function actionQuotation()
     {
-
 
         $models = Project::find()
         ->orderBy(['myRFQ' => SORT_DESC])
@@ -2042,6 +2361,15 @@ class ProjectController extends Controller
             $models->save();
 
             return $this->redirect(['/project/detail','id' => (string)$models->project]);
+            
+        } elseif ($module == 'unable') {
+
+            $models->read_unread = 0;
+            $models->status = 'In Progress Quotation';
+
+            $models->save();
+
+            return $this->redirect(['/project/unable-quote','id' => (string)$models->project]);
             
         }
 
