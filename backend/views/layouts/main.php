@@ -14,12 +14,15 @@ use yii\widgets\Menu;
 use yii\bootstrap\Modal;
 use common\models\Notification;
 use common\models\Project;
+use common\models\Message;
 
 $notifyAdmin = Notification::notifyAdmin();
 $notifyAdminInProgressQt = Notification::notifyAdminInProgressQt();
 $notifyAdminInProgressOrder = Notification::notifyAdminInProgressOrder();
 
 $reviseAdmin = Project::reviseAdmin();
+
+$msgAdmin = Message::msgAdmin();
 
 
 AppAsset::register($this);
@@ -47,7 +50,7 @@ AppAsset::register($this);
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="<?php echo Yii::$app->request->baseUrl; ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>eB</span>
       <!-- logo for regular state and mobile devices -->
@@ -63,6 +66,61 @@ AppAsset::register($this);
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
+
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <?php echo count($msgAdmin) == 0 ? '' : '<span class="label label-success">'.count($msgAdmin).'</span>' ?>
+
+            </a>
+            <?php if (empty($msgAdmin)) { ?>
+                                                    
+            <?php } else { ?>
+
+
+
+            <ul class="dropdown-menu">
+              <li class="header">You have <?= count($msgAdmin) == 0 ? '' : count($msgAdmin) ?> messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <?php foreach ($msgAdmin as $key_msg => $value_msg) { ?>
+                  <li><!-- start message -->
+
+
+                          <?= Html::a(
+                            '<div class="pull-left">
+                           <img src="'.Yii::$app->request->baseUrl.'/adminlte/dist/img/personal.png" class="img-circle" alt="User Image"></div><h4>'.$value_msg['from_who'].'<small><i class="fa fa-clock-o"></i></small></h4><p>'.$value_msg['messages'].'</p>',
+                          [
+                            'message',
+                            'id' => (string)$value_msg['_id'],
+
+                          ], 
+                          ['class' => '']) ?>
+
+
+
+
+                  </li>
+                  <?php } ?>
+
+
+
+                </ul>
+              </li>
+  
+            </ul>
+
+            <?php } ?>
+
+
+          </li>
+
+
+
+
+
 
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">

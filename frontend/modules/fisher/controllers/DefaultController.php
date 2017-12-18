@@ -14,6 +14,7 @@ use common\models\LoginFormFisher;
 use common\models\User;
 use common\models\Notification;
 use common\models\Email;
+use common\models\Message;
 use yii\web\Session;
 use yii\helpers\Url;
 use frontend\models\OcCustomer;
@@ -445,6 +446,20 @@ class DefaultController extends Controller
 
     }
 
+    public function actionMessage($id)
+    {
+
+        $models = Message::find()
+        ->where(['_id' => (string)$id])
+        ->one();
+
+        $models->read_unread = 1;
+
+        $models->save();
+
+        return $this->redirect(['/fisher/project/message','project' => (string)$models->project]);
+
+    }
 
 
 

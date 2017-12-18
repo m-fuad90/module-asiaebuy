@@ -21,6 +21,7 @@ use common\models\User;
 use common\models\Asiaebuy;
 use yii\db\Query;
 use yii\helpers\Url;
+use common\models\Message;
 /**
  * ProjectController implements the CRUD actions for Project model.
  */
@@ -2377,6 +2378,82 @@ class ProjectController extends Controller
 
     }
 
+    public function actionMessage($project)
+    {
+        $newProject_id = new \MongoDB\BSON\ObjectID($project);
+
+        $message = new Message();
+        $model = $this->findModel($newProject_id);
+        $message_all = Message::find()
+        ->where(
+            [
+                'project' => $newProject_id,
+            ])
+        ->orderBy([
+            '_id'=>SORT_DESC,
+        ])
+        ->all();
+
+
+
+
+        if ($message->load(Yii::$app->request->post()) ) {
+
+            $message->date_create = date('Y-m-d H:i:s');
+            $message->project = $newProject_id;
+            $message->from_who = 'cs@asiaebuy.com';
+            $message->to_who = $model->email;
+            $message->read_unread = 0;
+            $message->save();
+
+
+            $asia = Url::to('@asiax');
+
+            $from =  Yii::$app->params['adminEmail'];
+            $to = $model->email;
+
+            $subject = $from.' Reply Your Message For Project : '.$model->myRFQ;
+
+            $text = $_POST['Message']['messages'].'<br>'.'View Message : '.$asia.'/fisher/default/message?id='.(string)$message->_id;
+
+            $mail = new Email();
+            $mail->from_who = $from;
+            $mail->to_who = $to;
+            $mail->subject = $subject;
+            $mail->text = $text;
+            $mail->date_mail = date('Y-m-d');
+            $mail->date_time_mail = date('Y-m-d H:i:s');
+            $mail->project_id = $newProject_id;
+            $mail->myRFQ = $model->myRFQ;
+
+
+            $mail->save();
+
+            Yii::$app->mailer->compose()
+                ->setFrom($from)
+                ->setTo($to)
+                ->setSubject($subject)
+                ->setHtmlBody($text)
+                ->send();
+
+
+            return $this->redirect(['/project/message','project'=>(string)$project]);
+
+        } else {
+
+            return $this->render('message',[
+                'model' => $model,
+                'message' => $message,
+                'message_all' => $message_all,
+
+            ]);
+
+        }
+
+
+        
+
+    }
 
 
 

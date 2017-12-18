@@ -205,6 +205,7 @@ $this->registerJs($script);
 
 
                                                     <?php } ?>
+                                                    <?= Html::a('MESSAGE', ['message', 'project' => (string)$model->_id], ['class' => 'btn btn-default']) ?>
 
 
 

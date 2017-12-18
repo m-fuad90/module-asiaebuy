@@ -10,10 +10,13 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAssetModule;
 use common\widgets\Alert;
 use common\models\Notification;
+use common\models\Message;
+use yii\bootstrap\Modal;
 
 $notifyCustomer = Notification::notifyCustomer();
 $notifyCustomerNeedToConfirm = Notification::notifyCustomerNeedToConfirm();
 
+$msgBuyer = Message::msgBuyer();
 
 AppAssetModule::register($this);
 
@@ -37,13 +40,13 @@ AppAssetModule::register($this);
         <div class="container">
             <div class="row">
                 <!-- BEGIN TOP BAR LEFT PART -->
-                <div class="col-md-5 col-sm-5 additional-shop-info">
+                <div class="col-md-4 col-sm-4 additional-shop-info">
   
                 </div>
                 <!-- END TOP BAR LEFT PART -->
                 <?php if (Yii::$app->user->isGuest == 'Guest') { ?>
                 <!-- BEGIN TOP BAR MENU -->
-                <div class="col-md-7 col-sm-7 additional-nav">
+                <div class="col-md-8 col-sm-8 additional-nav">
 
                         
                     <ul class="list-unstyled list-inline pull-right">
@@ -56,7 +59,7 @@ AppAssetModule::register($this);
                 <!-- END TOP BAR MENU -->
                 <?php } else { ?>
                 <!-- BEGIN TOP BAR MENU -->
-                <div class="col-md-7 col-sm-7 additional-nav">
+                <div class="col-md-8 col-sm-8 additional-nav">
                     <ul class="list-unstyled list-inline pull-right">
                         <li>
                             <?= Html::a('myRFQ', ['/fisher/project/rfq'], ['class' => '']) ?>
@@ -113,6 +116,39 @@ AppAssetModule::register($this);
 
 
                             
+                        </li>
+                        <li>
+                            <?php if (count($msgBuyer) == 0) { ?>
+
+
+
+
+                                <i class="fa fa-bell" style="color: #fff;"></i>
+
+                            <?php } else { ?>
+
+
+                                <?= Html::a('<i class="fa fa-envelope-o"></i><span class="badge">'.count($msgBuyer).'</span>', ['/fisher/project/order'], ['class' => 'dropdown-toggle','data-toggle'=>'dropdown']) ?>
+
+                                  <ul class="dropdown-menu">
+                                      <li>
+                                      <?php foreach ($msgBuyer as $key_msg => $value_msg) { ?>
+
+                                          <?= Html::a('New Message : ' .$value_msg['messages'], 
+                                            [
+                                              '/fisher/default/message', 
+                                              'id' => (string)$value_msg['_id'],
+          
+                                            ], ['class' => '']) ?>
+
+                                      <?php } ?>
+                                      </li>
+
+
+                                  </ul>
+
+
+                            <?php } ?>
                         </li>
                         <li>
                             <?= Html::a(Yii::$app->user->identity->username, ['/site/account'], ['class' => '']) ?>
@@ -243,4 +279,17 @@ AppAssetModule::register($this);
 <?php $this->endBody() ?>
 </body>
 </html>
+
+<?php 
+Modal::begin([
+            'header' => 'AsiaEBuy',
+            'id'     => 'model',
+            'size'   => 'model-lg',
+    ]);
+    
+    echo "<div id='modelContent'></div>";
+    
+    Modal::end();
+?>
+
 <?php $this->endPage() ?>

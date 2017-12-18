@@ -30,9 +30,7 @@ $this->title = 'Fisher Brand';
         <p>
         <marquee onmouseover="this.stop();" onmouseout="this.start();">Due to systems update at Chicago (IL, USA), our service might be interrupted from 11:00pm - 1:00am (GMT-6). Prices listed are for reference only (ex-U.S.A.). Please refer to our quotation for final local price.</marquee></p>
 
-        
-
-        <iframe src="https://www.fishersci.com" height="700px" width="100%"></iframe>
+            <iframe src="https://www.fishersci.com" height="700px" width="100%"></iframe>
      </div>
 
      <div class="col-md-4 col-sm-4">

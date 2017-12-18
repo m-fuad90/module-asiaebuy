@@ -15,6 +15,7 @@ use common\models\User;
 use common\models\Asiaebuy;
 use common\models\Paypal;
 use common\models\Email;
+use common\models\Message;
 use yii\helpers\Url;
 use yii\db\Query;
 /**
@@ -982,9 +983,91 @@ class ProjectController extends Controller
 
     }
 
+    public function actionChat()
+    {
+        return $this->render('chat');
+    }
+
+    public function actionMessage($project)
+    {   
+        $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
 
 
+
+        $message = new Message();
+        $model = $this->findModel($newProject_id);
+        $message_all = Message::find()->where(
+            [
+                'project' => $newProject_id,
+            ])
+        ->orderBy([
+            '_id'=>SORT_DESC,
+        ])
+
+        ->all();
+
+
+        $user = User::find()->where(['_id' => Yii::$app->user->identity->id])->one();
+
+
+
+        if ($message->load(Yii::$app->request->post()) ) {
+
+            $message->date_create = date('Y-m-d H:i:s');
+            $message->project = $newProject_id;
+            $message->from_who = $model->email;
+            $message->to_who = 'cs@asiaebuy.com';
+            $message->read_unread = 0;
+            $message->save();
+
+            $admin = Url::to('@admin');
+
+            $from =  $user->email;
+            $to = Yii::$app->params['adminEmail'];
+
+            $subject = $user->email.' Send Message For Project : '.$model->myRFQ;
+
+            $text = $_POST['Message']['messages'].'<br>'.'View Message : '.$admin.'/site/message?id='.(string)$message->_id;
+
+            $mail = new Email();
+            $mail->from_who = $from;
+            $mail->to_who = $to;
+            $mail->subject = $subject;
+            $mail->text = $text;
+            $mail->date_mail = date('Y-m-d');
+            $mail->date_time_mail = date('Y-m-d H:i:s');
+            $mail->project_id = $newProject_id;
+            $mail->myRFQ = $model->myRFQ;
+
+            $mail->save();
+
+            Yii::$app->mailer->compose()
+                ->setFrom($from)
+                ->setTo($to)
+                ->setSubject($subject)
+                ->setHtmlBody($text)
+                ->send();
+
+
+
+            return $this->redirect(['/fisher/project/message','project'=>(string)$newProject_id]);
+
+        } else {
+
+            return $this->render('message',[
+                'model' => $model,
+                'message' => $message,
+                'message_all' => $message_all,
+
+            ]);
+
+        }
+
+
+        
+
+    }
 
 
 }

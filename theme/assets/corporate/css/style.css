@@ -2217,15 +2217,7 @@ Demo Utils
   border-top: 22px solid #F8F8F8;
 }
 .testimonials-v1 blockquote:after { 
-  width: 13px; 
-  height: 13px;
-  z-index: 23; 
-  content: " "; 
-  display: block !important; 
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background: #E6400C url(../img/blockquote-corner.png) no-repeat;
+
 }
 
 .testimonials-v1 .carousel-info img {
@@ -2277,6 +2269,94 @@ Demo Utils
 .testimonials-v1 .right-btn:hover {
     background: #e84d1c url(../../pages/img/fa-angles.png) no-repeat -33px -31px;
 }
+
+
+.testimonials-v2 blockquote {
+	padding: 15px; 
+	border: none;
+	color: #666;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	background: #F8F8F8;
+	position: relative;
+}
+.testimonials-v2 blockquote:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  right: 70px;
+  width: 0;
+  height: 0;
+  border-left: 0 inset rgba(0, 0, 0, 0);
+  border-left: 22px inset rgba(0, 0, 0, 0);
+  border-top: 22px solid #F8F8F8;
+}
+.testimonials-v2 blockquote:after { 
+
+  
+}
+
+.testimonials-v2 .carousel-info img {
+	width: 75px;
+	height: 75px;
+	padding: 3px; 
+	border-radius: 150px !important;
+	border: solid 1px #f5f5f5;
+}
+.testimonials-v2 .carousel-info {
+	overflow: hidden;
+}
+.testimonials-v2 .carousel-info img {
+	margin-right: 15px;
+}
+.testimonials-v2 .carousel-info span {
+	display: block;
+}
+.testimonials-v2 span.testimonials-name {
+	color: #E6400C;
+	font-size: 16px;
+	font-weight: 300;
+	margin: 23px 0 7px;
+}
+.testimonials-v2 span.testimonials-post {
+	color: #656565;
+	font-size: 12px;
+}
+.testimonials-v2 .left-btn,
+.testimonials-v2 .right-btn {
+	right: 0;
+	width: 26px;
+	height: 26px;
+	bottom: 30px;
+	border-radius: 26px !important;
+	position: absolute;
+	display: inline-block;
+}
+.testimonials-v2 .left-btn {
+	right: 30px;
+    background: url(../../pages/img/fa-angles.png) no-repeat 8px 8px;
+}
+.testimonials-v2 .right-btn {
+    background: url(../../pages/img/fa-angles.png) no-repeat -33px 8px;
+}
+.testimonials-v2 .left-btn:hover {
+    background: #e84d1c url(../../pages/img/fa-angles.png) no-repeat 8px -31px;
+}
+.testimonials-v2 .right-btn:hover {
+    background: #e84d1c url(../../pages/img/fa-angles.png) no-repeat -33px -31px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* our clients */
 .our-clients {

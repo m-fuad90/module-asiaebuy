@@ -12,6 +12,7 @@ use common\models\Paypal;
 use common\models\Project;
 use yii\data\ActiveDataProvider;
 use common\models\Email;
+use common\models\Message;
 /**
  * Site controller
  */
@@ -31,7 +32,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index','setting','paypal','email'],
+                        'actions' => ['logout', 'index','setting','paypal','email','message'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -134,4 +135,22 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+
+    public function actionMessage($id)
+    {
+
+        $models = Message::find()
+        ->where(['_id' => (string)$id])
+        ->one();
+
+        $models->read_unread = 1;
+
+        $models->save();
+
+        return $this->redirect(['/project/message','project' => (string)$models->project]);
+
+    }
+
+
+
 }
