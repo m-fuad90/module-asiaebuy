@@ -69,7 +69,7 @@ AppAsset::register($this);
 
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="/" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
               <?php echo count($msgAdmin) == 0 ? '' : '<span class="label label-success">'.count($msgAdmin).'</span>' ?>
 
@@ -93,7 +93,7 @@ AppAsset::register($this);
                             '<div class="pull-left">
                            <img src="'.Yii::$app->request->baseUrl.'/adminlte/dist/img/personal.png" class="img-circle" alt="User Image"></div><h4>'.$value_msg['from_who'].'<small><i class="fa fa-clock-o"></i></small></h4><p>'.$value_msg['messages'].'</p>',
                           [
-                            'message',
+                            '/site/message',
                             'id' => (string)$value_msg['_id'],
 
                           ], 
@@ -118,13 +118,9 @@ AppAsset::register($this);
           </li>
 
 
-
-
-
-
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="/" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
               <?php echo count($notifyAdmin) == 0 ? '' : '<span class="label label-default">'.count($notifyAdmin).'</span>' ?>
               
@@ -170,7 +166,7 @@ AppAsset::register($this);
 
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="#" >
+            <a href="" class="disabled">
               <span class="hidden-xs"><?= Yii::$app->user->identity->email; ?></span>
             </a>
 
@@ -268,19 +264,9 @@ AppAsset::register($this);
                     ?>
 
 
-
-
-
-
-
     </section>
     <!-- /.sidebar -->
   </aside>
-
-
-
-
-
 
 
   <!-- Content Wrapper. Contains page content -->

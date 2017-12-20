@@ -33,7 +33,9 @@ class ProjectController extends Controller
             [
                 'status' => 'Submit',
                 'belong_to' => Yii::$app->user->identity->id
-            ])->all();
+            ])
+        ->orderBy(['myRFQ' => SORT_DESC])
+        ->all();
 
         return $this->render('rfq', [
             'models' => $models,
@@ -106,7 +108,9 @@ class ProjectController extends Controller
         ->andWhere(['or',
            ['status'=> 'Quoted'],
            ['status'=> 'Order Placed']
-        ])->all();
+        ])
+        ->orderBy(['myRFQ' => SORT_DESC])
+        ->all();
 
 
 

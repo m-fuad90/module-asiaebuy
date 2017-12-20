@@ -24,7 +24,8 @@ class AppAsset extends AssetBundle
         'adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
         'adminlte/dist/css/AdminLTE.min.css',
         'adminlte/dist/css/skins/_all-skins.min.css',
-        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic'
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic',
+        'css/site.css',
 
 
     ];
@@ -35,7 +36,7 @@ class AppAsset extends AssetBundle
         'metronic5/app/js/dashboard.js',
         'js/js.js',*/
 
-                'adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js',
+        'adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js',
         'adminlte/bower_components/fastclick/lib/fastclick.js',
         'adminlte/dist/js/adminlte.min.js',
         'adminlte/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js',
@@ -44,7 +45,7 @@ class AppAsset extends AssetBundle
         'adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js',
         'adminlte/bower_components/Chart.js/Chart.js',
         'adminlte/dist/js/pages/dashboard2.js',
-                'adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.js',
+        'adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.js',
         'adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
         'adminlte/dist/js/demo.js',
 

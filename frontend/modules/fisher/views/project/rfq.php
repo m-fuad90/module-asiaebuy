@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <tr>
                                     <th>Details</th>
                                     <th>Information</th>
+                                    <th>Action</th>
 
                                 </tr>
                             </thead>
@@ -108,6 +109,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                             
 
                                         <?php }?>
+                                    </td>
+                                    <td>
+                                        <?= Html::a('MESSAGE', ['message', 'project' => (string)$model->_id], ['class' => 'btn btn-primary']) ?>
                                     </td>
 
 

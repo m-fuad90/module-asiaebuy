@@ -150,7 +150,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                             <?php } ?>
 
-                                            <?= Html::a('MESSAGE', ['message', 'project' => (string)$model->_id], ['class' => 'btn btn-default']) ?>
+                                            <?= Html::a('MESSAGE', ['message', 'project' => (string)$model->_id], ['class' => 'btn btn-primary']) ?>
                                     </td>
 
 

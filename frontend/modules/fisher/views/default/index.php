@@ -7,7 +7,43 @@ use yii\grid\GridView;
 use yii\widgets\ActiveForm;
 
 
+$script = <<< JS
+$(document).ready(function(){
 
+
+    $('.search-item').on('click', function () {
+        var search = $('.url').val();
+        $.ajax({
+            type: 'POST',
+            url: 'fisher/default/curl',
+            data: {url: search},
+            success: function(data) {
+                $(".embed").show();
+                $(".info-complete").html(data);
+   
+
+            }
+
+        })
+
+
+    });
+
+
+    $('.url').on("input", function() {
+      var dInput = $(this).val(); 
+      $('.url_myspot').val(dInput);
+
+    });
+
+
+
+
+
+
+}); 
+JS;
+$this->registerJs($script);
 $this->title = 'Fisher Brand';
 ?><!-- BEGIN: Subheader -->
 
@@ -30,7 +66,17 @@ $this->title = 'Fisher Brand';
         <p>
         <marquee onmouseover="this.stop();" onmouseout="this.start();">Due to systems update at Chicago (IL, USA), our service might be interrupted from 11:00pm - 1:00am (GMT-6). Prices listed are for reference only (ex-U.S.A.). Please refer to our quotation for final local price.</marquee></p>
 
-            <iframe src="https://www.fishersci.com" height="700px" width="100%"></iframe>
+        <iframe src="https://www.fishersci.com" height="700px" width="100%"></iframe>
+            <!--<input type="text" id="input-search url" class="form-control input-search url input-lg" value="https://www.fishersci.com/us/en/home.html">
+            <br>
+            <button class="btn btn-primary btn-lg search-item" type="button"><i class="icon-magnifier"></i> Enter </button>
+
+            <br><br>
+            <div class="info-complete">
+
+
+            </div> -->
+
      </div>
 
      <div class="col-md-4 col-sm-4">

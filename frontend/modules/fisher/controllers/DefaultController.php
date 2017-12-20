@@ -29,6 +29,22 @@ class DefaultController extends Controller
     public $layout = '@frontend/views/layouts/module.php';
 
 
+
+
+    public function actionCurl()
+    {
+
+        $url = $_POST['url'];
+
+       echo "<iframe sandbox='allow-same-origin allow-scripts allow-popups allow-forms' src='".$url."'  style='overflow: hidden;height:600px;width:100%;'></iframe>";
+
+
+
+    }
+
+
+
+
     public function actionIndex()
     {
  

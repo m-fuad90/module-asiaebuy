@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="panel panel-default">
 
-                <div class="panel-heading">Project : <?= $model->myRFQ?></div>
+                <div class="panel-heading">Ref : <?= $model->myRFQ?></div>
 
                 <div class="panel-body">
 

@@ -123,12 +123,12 @@ AppAssetModule::register($this);
 
 
 
-                                <i class="fa fa-bell" style="color: #fff;"></i>
+                                <i class="fa fa-envelope" style="color: #fff;"></i>
 
                             <?php } else { ?>
 
 
-                                <?= Html::a('<i class="fa fa-envelope-o"></i><span class="badge">'.count($msgBuyer).'</span>', ['/fisher/project/order'], ['class' => 'dropdown-toggle','data-toggle'=>'dropdown']) ?>
+                                <?= Html::a('<i class="fa fa-envelope"></i><span class="badge">'.count($msgBuyer).'</span>', ['/fisher/project/order'], ['class' => 'dropdown-toggle','data-toggle'=>'dropdown']) ?>
 
                                   <ul class="dropdown-menu">
                                       <li>

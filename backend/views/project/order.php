@@ -180,6 +180,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                                                     <?= Html::a('IN '.$model['invoice_no'].'F', ['invoice', 'id' => (string)$model['_id']], ['class' => 'btn btn-default']) ?>
+                                                    <?= Html::a('MESSAGE', ['message', 'project' => (string)$model->_id], ['class' => 'btn btn-primary']) ?>
 
                                                 </td>
                                             </tr>
